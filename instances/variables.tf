@@ -9,7 +9,7 @@ variable "instance_type" {
 # Amazon Linux AMI
 # Ubuntu = ami-0ac019f4fcb7cb7e6
 variable "amis" {
-  default = "ami-0ac019f4fcb7cb7e6"
+  default = "ami-0e452d8d9e0832292"
 }
 
 variable "public_subnet_id_1a" {}
@@ -17,3 +17,4 @@ variable "public_subnet_id_1a" {}
 variable "key" {
   default = "AndresPareja"
 }
+variable "vpc_id" {}

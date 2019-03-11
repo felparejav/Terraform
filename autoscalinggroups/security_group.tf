@@ -1,6 +1,6 @@
 resource "aws_security_group" "APareja_Security_Group_Front" {
   name   = "APareja SG Front"
-  vpc_id = "${data.aws_vpc.IGonzalez_APareja_VPC.id}"
+  vpc_id = "${var.vpc_id}"
 
   ingress {
     from_port   = 22
@@ -62,7 +62,7 @@ resource "aws_security_group" "APareja_Security_Group_Front" {
 
 resource "aws_security_group" "APareja_Security_Group_Back" {
   name   = "APareja SG Back"
-  vpc_id = "${data.aws_vpc.IGonzalez_APareja_VPC.id}"
+  vpc_id = "${var.vpc_id}"
 
   ingress {
     from_port   = 22

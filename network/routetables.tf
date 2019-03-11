@@ -1,9 +1,9 @@
 resource "aws_route_table" "APareja_Public_RouteTable" {
-  vpc_id = "${data.aws_vpc.IGonzalez_APareja_VPC.id}"
+  vpc_id = "${aws_vpc.APareja.id}"
 
   route {
     cidr_block = "0.0.0.0/0"
-    gateway_id = "${data.aws_internet_gateway.APareja_IGonzalez.id}"
+    gateway_id = "${aws_internet_gateway.APareja_IG.id}"
   }
 
   tags {
@@ -28,7 +28,7 @@ resource "aws_route_table" "APareja_Private_RouteTable" {
 
   route {
     cidr_block = "0.0.0.0/0"
-    gateway_id = "${data.aws_internet_gateway.APareja_IGonzalez.id}"
+    gateway_id = "${aws_internet_gateway.APareja_IG}"
   }
 
   tags {

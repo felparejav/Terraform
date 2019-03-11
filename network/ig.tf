@@ -1,5 +1,5 @@
-/*resource "aws_internet_gateway" "APareja_IG" {
-  vpc_id = "${data.aws_vpc.IGonzalez_APareja_VPC.id}"
+resource "aws_internet_gateway" "APareja_IG" {
+  vpc_id = "${aws_vpc.APareja.id}"
 
   tags {
     Name = "APareja_IG"
@@ -8,7 +8,7 @@
     start = "start"
     stop = "stop"
 }
-}*/
+}
 resource "aws_eip" "APareja_ElasticIP" {
   vpc = true
 }

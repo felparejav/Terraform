@@ -1,6 +1,6 @@
 resource "aws_security_group" "APareja_security_group_jenkins" {
   name   = "Security group jenkins"
-  vpc_id = "${data.aws_vpc.IGonzalez_APareja_VPC.id}"
+  vpc_id = "${var.vpc_id}"
 
   ingress {
     from_port   = 22

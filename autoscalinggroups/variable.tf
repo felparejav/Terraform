@@ -19,3 +19,5 @@ variable "load_balancer" {
 variable "key" {
   default = "AndresPareja"
 }
+variable "vpc_id" {}
+

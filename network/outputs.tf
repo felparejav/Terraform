@@ -17,3 +17,6 @@ output "public_subnet" {
 output "private_subnet" {
   value = ["${aws_subnet.Andres_Pareja_Private_Subnet_1a.id}"]
 }
+output "vpc_id" {
+  value = "${aws_vpc.APareja.id}"
+}

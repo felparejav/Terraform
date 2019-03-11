@@ -11,3 +11,4 @@ variable "public_subnet" {
 }
 
 variable "security_group" {}
+variable "vpc_id" {}
