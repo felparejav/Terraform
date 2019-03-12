@@ -17,8 +17,8 @@ resource "aws_security_group" "APareja_security_group_jenkins" {
   }
 
   ingress {
-    from_port   = 4605
-    to_port     = 4605
+    from_port   = 4506
+    to_port     = 4506
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
@@ -38,8 +38,8 @@ resource "aws_security_group" "APareja_security_group_jenkins" {
   }
 
   egress {
-    from_port   = 4605
-    to_port     = 4605
+    from_port   = 4506
+    to_port     = 4506
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }

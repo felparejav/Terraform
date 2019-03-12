@@ -77,6 +77,19 @@ resource "aws_security_group" "APareja_Security_Group_Back" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
+  ingress {
+    from_port   = 4505
+    to_port     = 4505
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
+    from_port   = 4506
+    to_port     = 4506
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
 
   egress {
     from_port   = 0
@@ -99,8 +112,8 @@ egress {
   }
 
   egress {
-    from_port   = 4605
-    to_port     = 4605
+    from_port   = 4506
+    to_port     = 4506
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
