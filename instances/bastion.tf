@@ -4,7 +4,7 @@ resource "aws_instance" "Andres_Pareja_Jenkins_1a" {
   subnet_id                   = "${var.public_jenkins_id_1a}"
   associate_public_ip_address = true
   key_name                    = "${var.key}"
-  private_ip                  = "10.0.5.20"
+  private_ip                  = "192.168.5.20"
 
   user_data       = "${file("./config/config_master.sh")}"
   security_groups = ["${aws_security_group.APareja_security_group_jenkins.id}"]

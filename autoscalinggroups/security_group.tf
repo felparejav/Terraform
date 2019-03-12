@@ -84,6 +84,26 @@ resource "aws_security_group" "APareja_Security_Group_Back" {
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
+egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  egress {
+    from_port   = 4505
+    to_port     = 4505
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  egress {
+    from_port   = 4605
+    to_port     = 4605
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
 
   tags {
     Name         = "Andres_Pareja_SG_Back"
