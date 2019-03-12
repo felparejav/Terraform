@@ -10,8 +10,8 @@ resource "aws_launch_configuration" "APareja_LC_Back" {
 resource "aws_autoscaling_group" "APareja_Back_ASG" {
   name                 = "APareja_Back_ASG"
   launch_configuration = "${aws_launch_configuration.APareja_LC_Back.name}"
-  min_size             = 3
-  max_size             = 6
+  min_size             = 1
+  max_size             = 2
   vpc_zone_identifier  = ["${var.private_subnet}"]
 
   tags = [

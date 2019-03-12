@@ -10,8 +10,8 @@ resource "aws_launch_configuration" "APareja_LC_Front" {
 resource "aws_autoscaling_group" "APareja_Front_ASG" {
   name                 = "APareja_Front_ASG"
   launch_configuration = "${aws_launch_configuration.APareja_LC_Front.name}"
-  min_size             = 6
-  max_size             = 12
+  min_size             = 1
+  max_size             = 2
   vpc_zone_identifier  = ["${var.public_subnet}"]
   target_group_arns    = ["${var.load_balancer}"]
 

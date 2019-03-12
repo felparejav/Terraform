@@ -15,6 +15,6 @@ variable "amis" {
 variable "public_subnet_id_1a" {}
 
 variable "key" {
-  default = "AndresPareja"
+  default = "APareja"
 }
 variable "vpc_id" {}

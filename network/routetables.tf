@@ -24,11 +24,11 @@ resource "aws_route_table_association" "test3" {
 }
 
 resource "aws_route_table" "APareja_Private_RouteTable" {
-  vpc_id = "${data.aws_vpc.IGonzalez_APareja_VPC.id}"
+  vpc_id = "${aws_vpc.APareja.id}"
 
   route {
     cidr_block = "0.0.0.0/0"
-    gateway_id = "${aws_internet_gateway.APareja_IG}"
+    gateway_id = "${aws_internet_gateway.APareja_IG.id}"
   }
 
   tags {
