@@ -1,10 +1,10 @@
 resource "aws_launch_configuration" "APareja_LC_Back" {
-  name     = "APareja_LC_Back"
+  name            = "APareja_LC_Back"
   image_id        = "${var.amis}"
   instance_type   = "t2.micro"
   security_groups = ["${aws_security_group.APareja_Security_Group_Back.id}"]
   key_name        = "${var.key}"
-  user_data = "${file("./autoscalinggroups/config.sh")}"
+  user_data       = "${file("./config/config_minion.sh")}"
 }
 
 resource "aws_autoscaling_group" "APareja_Back_ASG" {

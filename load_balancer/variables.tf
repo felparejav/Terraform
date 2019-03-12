@@ -6,7 +6,7 @@ variable "ports" {
   default = ["80", "3030"]
 }
 
-variable "public_subnet" {
+variable "public_subnet_lb" {
   type = "list"
 }
 

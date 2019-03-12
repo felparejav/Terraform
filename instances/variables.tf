@@ -8,13 +8,15 @@ variable "instance_type" {
 
 # Amazon Linux AMI
 # Ubuntu = ami-0ac019f4fcb7cb7e6
+# EC2 = ami-02da3a138888ced85 
 variable "amis" {
-  default = "ami-0e452d8d9e0832292"
+  default = "ami-02da3a138888ced85"
 }
 
-variable "public_subnet_id_1a" {}
+variable "public_jenkins_id_1a" {}
 
 variable "key" {
   default = "APareja"
 }
+
 variable "vpc_id" {}

@@ -1,5 +1,5 @@
 variable "amis" {
-  default = "ami-0ac019f4fcb7cb7e6"
+  default = "ami-02da3a138888ced85"
 }
 
 variable "public_subnet" {
@@ -19,5 +19,5 @@ variable "load_balancer" {
 variable "key" {
   default = "APareja"
 }
-variable "vpc_id" {}
 
+variable "vpc_id" {}

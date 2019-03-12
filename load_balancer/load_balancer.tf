@@ -2,7 +2,7 @@ resource "aws_lb" "Andres_Pareja_LB" {
   name               = "AParejaELB"
   load_balancer_type = "application"
   security_groups    = ["${var.security_group}"]
-  subnets            = ["${var.public_subnet}"]
+  subnets            = ["${var.public_subnet_lb}"]
 
   tags {
     Name         = "Andres_Pareja_LB"

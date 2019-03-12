@@ -2,13 +2,14 @@ resource "aws_internet_gateway" "APareja_IG" {
   vpc_id = "${aws_vpc.APareja.id}"
 
   tags {
-    Name = "APareja_IG"
-    create_by = "Andres_Pareja"
+    Name         = "APareja_IG"
+    create_by    = "Andres_Pareja"
     project_name = "RampUP_Andres_Pareja"
-    start = "start"
-    stop = "stop"
+    start        = "start"
+    stop         = "stop"
+  }
 }
-}
+
 resource "aws_eip" "APareja_ElasticIP" {
   vpc = true
 }
