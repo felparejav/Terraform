@@ -14,5 +14,6 @@ sudo git clone https://github.com/saltstack-formulas/jenkins-formula.git;
 cd /srv;
 sudo git clone https://github.com/felparejav/salt.git;
 sudo git clone https://github.com/felparejav/pillar.git;
+sudo yum update;
 sudo systemctl restart salt-minion;
 sudo systemctl restart salt-master;
