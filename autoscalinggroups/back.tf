@@ -13,6 +13,7 @@ resource "aws_autoscaling_group" "APareja_Back_ASG" {
   min_size             = 1
   max_size             = 2
   vpc_zone_identifier  = ["${var.private_subnet}"]
+  target_group_arns    = ["${var.load_balancer_i}"]
 
   tags = [
     {

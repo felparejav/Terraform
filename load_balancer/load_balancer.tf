@@ -1,7 +1,7 @@
 resource "aws_lb" "Andres_Pareja_LB" {
   name               = "AParejaELB"
   load_balancer_type = "application"
-  security_groups    = ["${var.security_group}"]
+  security_groups    = ["${var.security_group_front}"]
   subnets            = ["${var.public_subnet_lb}"]
 
   tags {
@@ -15,7 +15,7 @@ resource "aws_lb" "Andres_Pareja_LB" {
 
 resource "aws_lb_target_group" "Andres_Pareja_LB_Target_Group" {
   name     = "AParejaTG"
-  port     = "80"
+  port     = "3030"
   protocol = "HTTP"
   vpc_id   = "${var.vpc_id}"
 }

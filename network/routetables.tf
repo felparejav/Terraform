@@ -24,6 +24,7 @@ resource "aws_route_table_association" "subnet2" {
   subnet_id      = "${aws_subnet.Andres_Pareja_Public_Subnet_1b.id}"
   route_table_id = "${aws_route_table.APareja_Public_RouteTable.id}"
 }
+
 resource "aws_route_table_association" "jenkins" {
   subnet_id      = "${aws_subnet.Andres_Pareja_Public_Jenkins_1a.id}"
   route_table_id = "${aws_route_table.APareja_Public_RouteTable.id}"

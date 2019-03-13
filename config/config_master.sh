@@ -17,3 +17,4 @@ sudo git clone https://github.com/felparejav/pillar.git;
 sudo yum update;
 sudo systemctl restart salt-minion;
 sudo systemctl restart salt-master;
+#sudo usermod -aG docker jenkins

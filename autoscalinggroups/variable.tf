@@ -16,6 +16,10 @@ variable "load_balancer" {
   type = "list"
 }
 
+variable "load_balancer_i" {
+  type = "list"
+}
+
 variable "key" {
   default = "APareja"
 }
